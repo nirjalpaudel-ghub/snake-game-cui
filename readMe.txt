@@ -1,0 +1,1 @@
+This is a simple snake game made in c++ and only my second project
