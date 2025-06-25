@@ -30,7 +30,6 @@ void setup()
     fruitX = rand() % width;
     fruitY = rand() % height;
 
-    // Optional: Clear previous tail data (not strictly necessary but cleaner)
     for (int i = 0; i < 100; i++) {
         tailX[i] = 0;
         tailY[i] = 0;
@@ -41,7 +40,7 @@ void setup()
 void draw()
 {
     //ansii escape sequence 
-    //kaam chai system("CLS") ko garxa
+    //same as system("CLS")
     cout << "\x1B[2J\x1B[H";
     for (int i=0;i<width;i++)
     {
@@ -71,7 +70,7 @@ void draw()
                 {
                   if (tailX[k] == j && tailY[k] == i)
                   {
-                    cout << "o"; // Tail symbol
+                    cout << "o"; 
                     print = true;
                     break;
                  }
@@ -133,7 +132,6 @@ void input()
 //game logic
 void logic()
 {
-    //tailUpdate();
     int prevX = x;
     int prevY = y;
     switch(dir)
@@ -207,7 +205,7 @@ int main()
     }
   cout << "\nGame Over! Press '1' to restart or any other key to quit..." << endl;
     Sleep(500);
-    while (_kbhit()) _getch(); //same as fflush(stdin) gcc ma problem aauna sakxa
+    while (_kbhit()) _getch(); //same as fflush(stdin)
     char check = _getch();
 
     if (check == '1') 
